@@ -1,0 +1,38 @@
+{
+  "name": "hoc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "normalize.css": "^4.1.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "handlebars": "^4.0.5",
+    "http-server": "^0.9.0",
+    "live-reload": "^1.1.0",
+    "node-sass": "^3.7.0",
+    "opener": "^1.4.1",
+    "parallelshell": "^2.0.0",
+    "postcss": "^5.0.21",
+    "postcss-cli": "^2.5.2",
+    "rimraf": "^2.5.2",
+    "watch": "^0.18.0"
+  },
+  "scripts": {
+    "build:css": "node-sass src/sass/style.scss | postcss --use autoprefixer -b 'last 2 versions' > public/css/style.css",
+    "watch:css": "watch 'npm run build:css' src/sass",
+
+    "build:html": "handlebars src/markup/templates/index.handlebars --commonjs handlebars > src/markup/compiled/index.js && node build/templates.js index.html",
+    "watch:html": "watch 'npm run build:html' src/markup/templates",
+
+    "watch": "parallelshell 'npm run watch:css' 'npm run watch:html'",
+
+    "open:dev": "opener http://localhost:9090",
+    "live-reload": "live-reload --port 9091 public/.",
+    "serve": "http-server -p 9090 public/",
+    "dev": "parallelshell 'npm run live-reload' 'npm run serve' 'npm run watch' & npm run open:dev"
+  },
+  "author": "",
+  "license": "ISC"
+}
