@@ -2,24 +2,64 @@
 <html>
 	<head>
 		<meta chaset="utf-8">
-		<meta name="vieport" content="width=device-width, initial-scale=1">
+		<meta name="vieport" content="width=device-width, initial-scale=1, minimal-ui">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<title>House Of Consultants</title>
 	</head>
-	<body>
-		<div class="outer-page-wrap">
-		<header>
-			<nav id="main-navigation">
-				<div class="logo">
-					<h1><a href="#">LOGO</a></h1>
+	<body class="">
+		<div class="outer-wrap">
+			<div class="inner-wrap">
+				<header>
+					<button id="nav-toggle" type="button" class="navbar-toggle">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar icon-bar-top"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar icon-bar-bot"></span>
+					</button>
+				</header>
+				<div id="main-navigation">
+					<nav class="container">
+						<div class="logo">
+							<h1><a href="#"><img src="images/logo-116X41.jpg" alt="House of consultants ltd"/></a></h1>
+						</div>
+						<ul>
+							<li><a href="#">Who We Are</a></li>
+							<li><a href="#">Consultants</a></li>
+							<li><a href="#">Section</a></li>
+							<li><a href="#">Section</a></li>
+							<li><a href="#">Section</a></li>
+						</ul>
+					</nav>
 				</div>
-				<ul>
-					<li><a href="#">About</a></li>
-				</ul>
-			</nav>
-			<div class="inner-page-wrap">
-			</div>
-		</header>
-		</div>
+
+				<div class="parallax">
+
+				  <div id="banner" class="parallax__group">
+				    <div class="parallax__layer parallax__layer--back"><div class="parallax-overlay-pattern"></div></div>
+				    <div class="parallax__layer parallax__layer--base">
+
+				      <div class="centered-content container">
+				      	<img src="images/logo-461x161.png" alt="House of consultants ltd"/>
+				      	<h2><span>Protecting Life</span><br><span>Protecting Assets</span><br><span>Protecting Reputation</span></h2>
+				      </div>
+				    </div>
+				  </div>
+
+				  <div id="who-we-are" class="parallax__group">
+				  	<div class="parallax__layer parallax__layer--back"><div class="parallax-overlay-pattern"></div></div>
+				    <div class="parallax__layer parallax__layer--base">
+				    	<div class="container">
+				      	<h2>Who We Are</h2>
+				      	<p>We are a UK Registered company, built upon a network of high level connections within the fields of risk assessment, physical protection and security services.</p>
+								<p>Our Board of Directors come from within British intelligence and Government Departments and have wide experience in Policing, the Military and Intelligence services.</p>
+				      </div>
+				    </div>
+				  </div>
+
+				</div>
+
+			</div><!--End .inner-wrap-->
+		</div><!--End .outer-wrap-->
 		<script src="//localhost:9091"></script> 
 	</body>
 </html>

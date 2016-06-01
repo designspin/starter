@@ -1,4 +1,82 @@
+@import 'vars/include';
+@import 'mixins/include';
 @import 'reset/include';
 @import 'base/include';
-
+@import 'utils/include';
 @import 'components/main-navigation/include';
+
+header {
+	position: absolute;
+	z-index: 9000;
+	top:28px;
+	left:24px;
+	background-color: transparent;
+}
+
+#banner .parallax__layer--back {
+	background: url('../images/background.jpg') center center no-repeat;
+	background-size: cover;
+}
+
+#banner .parallax__layer--base {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	color: #fff;
+
+	.centered-content {
+		position: absolute;
+		width: 100%;
+		left:50%;
+		top:50%;
+		transform:translate(-50%, -50%);
+	}
+
+	h2 {
+		font-size: 30px;
+		span {
+			white-space: nowrap;
+		}
+
+		@include breakpoint(small-device) {
+			font-size: 3em;
+		}
+	}
+
+	h2:before {
+		position:relative;
+		content: '';
+		display: block;
+		left:50%;
+		transform:translateX(-50%);
+		width:100%;
+		height:10px;
+		margin-bottom: 24px;
+		background: linear-gradient(to right, rgba(255,255,255,0), #fff, rgba(255,255,255,0));
+	}
+}
+
+#banner .parallax-overlay-pattern {
+	position: relative;
+	width:100%;
+	height:100vh;
+	//background: linear-gradient(rgba(62,180,217,0.6), rgba(62,180,217,0.3));
+	background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3));
+}
+
+#who-we-are {
+	max-height:720px;
+}
+
+#who-we-are .container {
+	position: absolute;
+	width: 100%;
+	left:50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	padding:24px 48px;
+}
+
+#who-we-are .parallax__layer--base {
+	background-color: #fff;
+}

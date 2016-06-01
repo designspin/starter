@@ -1,3 +1,84 @@
 body {
-	background-color:#fff;
+	font-family: Arial, sans-serif;
+	font-size: 16px;
 }
+
+* {
+	box-sizing: border-box;
+	font-weight: lighter;
+}
+
+a {
+	color: $anchor-text;
+}
+
+a:hover {
+	color: $anchor-hover;
+}
+
+.rhythm-16, ul {
+  font-size: 1em; /* 16px */
+  line-height: 1.5000em; /* 24px */
+  margin: 0 0 1.5000em 0;
+}
+
+small, .small, .rhythm-8 {
+	font-size: 0.5000em; /* 8px */
+  line-height: 3.0000em; /* 24px */
+  margin-top: 3.0000em;  margin-bottom: 0.0000em;
+}
+
+h1, .h1, .rhythm-64 {
+	font-size: 4.0000em; /* 64px */
+  line-height: 1.1250em; /* 72px */
+  margin-top: 0.3750em;  margin-bottom: 0.0000em;
+}
+
+h2, .h2, .rhythm-48 {
+	font-size: 3.0000em; /* 48px */
+  line-height: 1.5000em; /* 72px */
+  margin-top: 0.5000em;  margin-bottom: 0.0000em;
+}
+
+h3, .h3, .rhythm-32 {
+	font-size: 2.0000em; /* 32px */
+  line-height: 1.5000em; /* 48px */
+  margin-top: 0.7500em;  margin-bottom: 0.0000em;
+}
+
+p, .p, h4, .h4, .rhythm-24 {
+	font-size: 1.5000em; /* 24px */
+  line-height: 1.5em; /* 24px */
+  margin-top: 1.0000em;  margin-bottom: 0.0000em;
+}
+
+p:last-child {
+	margin-bottom: 1.0000em;
+}
+
+img {
+	max-width:100%;
+	height:auto;
+}
+
+.outer-wrap {
+	position: relative;
+	overflow: hidden;
+	width:100%;
+}
+
+.inner-wrap {
+	position: relative;
+	width:100%;
+}
+
+.nav-open .inner-wrap {
+	transform: translate3d(70%, 0, 0) scale3d(1,1,1);
+}
+
+@include breakpoint(small-device) {
+	.nav-open .inner-wrap {
+		transform: translate3d(0, 0, 0) scale3d(1,1,1);
+	}
+}
+

@@ -1,0 +1,14 @@
+@mixin breakpoint($point) {
+  @if $point == tiny-device {
+    @media (min-width: $tiny-device) { @content; }
+  }
+  @if $point == small-device {
+    @media (min-width: $small-device) { @content; }
+  }
+  @else if $point == medium-device {
+    @media (min-width: $medium-device) { @content; }
+  }
+  @else if $point == large-device {
+    @media (min-width: $large-device)  { @content; }
+  }
+}
