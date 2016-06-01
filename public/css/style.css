@@ -367,3 +367,9 @@ textarea {
 body {
   background-color: #fff; }
 
+#main-navigation {
+  background-color: red; }
+  #main-navigation ul {
+    padding-left: 0;
+    list-style: none; }
+
