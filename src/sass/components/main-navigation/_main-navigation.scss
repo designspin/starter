@@ -100,6 +100,7 @@ button.navbar-toggle:focus {
 
 		.logo {
 			float: left;
+			margin-left: 0;
 		}
 
 		.logo h1 {
@@ -109,8 +110,8 @@ button.navbar-toggle:focus {
 		ul {
 			float: right;
 			font-size: 1em; /* 16px */
-		  line-height: 4.5000em; /* 72px */
-		  margin: 0;
+			line-height: 4.5000em; /* 72px */
+			margin: 0;
 		}
 
 		ul li {
@@ -118,7 +119,7 @@ button.navbar-toggle:focus {
 		}
 
 		ul li:last-child a {
-			padding-right: 1.5em;
+			padding-right: 0;
 		}
 
 		ul li a {

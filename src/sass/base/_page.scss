@@ -19,8 +19,9 @@ a:hover {
 .rhythm-16, ul {
   font-size: 1em; /* 16px */
   line-height: 1.5000em; /* 24px */
-  margin: 0 0 1.5000em 0;
+  margin: 1.5000em 0 1.5000em 0;
 }
+
 
 small, .small, .rhythm-8 {
 	font-size: 0.5000em; /* 8px */
@@ -42,13 +43,13 @@ h2, .h2, .rhythm-48 {
 
 h3, .h3, .rhythm-32 {
 	font-size: 2.0000em; /* 32px */
-  line-height: 1.5000em; /* 48px */
+  line-height: 2.25000em; /* 72px */
   margin-top: 0.7500em;  margin-bottom: 0.0000em;
 }
 
 p, .p, h4, .h4, .rhythm-24 {
 	font-size: 1.5000em; /* 24px */
-  line-height: 1.5em; /* 24px */
+  line-height: 1.5em; /* 36px */
   margin-top: 1.0000em;  margin-bottom: 0.0000em;
 }
 

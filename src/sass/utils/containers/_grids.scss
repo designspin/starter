@@ -1,0 +1,30 @@
+.row {
+	@include clearfix();
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+[class^=col-] {
+	position: relative;
+	
+	min-height:1px;
+	padding-left:30px;
+	padding-right:30px;
+	width:100%;
+}
+
+@include breakpoint(small-device) {
+	@for $i from 1 through 4 {
+		.col-#{$i}-of-4 {
+			width: (100% / 4) * $i;
+			float:left;
+		}
+	}
+
+	@for $i from 5 through 1 {
+		.col-#{$i}-of-5 {
+			width: (100% / 5) * $i;
+			float:left;
+		}
+	}	
+}
